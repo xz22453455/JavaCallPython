@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ss.dao.AlgorithmMapper">
+	<resultMap id="BaseResultMap"
+		type="com.ss.pojo.Algorithm">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="express_str" property="algorithm" jdbcType="VARCHAR" />
+		<result column="main_name" property="main" jdbcType="VARCHAR" />
+		<result column="v_1" property="v_1" jdbcType="INTEGER" />
+		<result column="v_2" property="v_2" jdbcType="INTEGER" />
+		<result column="v_3" property="v_3" jdbcType="INTEGER" />
+		<result column="v_4" property="v_4" jdbcType="INTEGER" />
+		<result column="v_5" property="v_5" jdbcType="INTEGER" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id,express_str
+	</sql>
+	<select id="getByPrimaryKey" resultMap="BaseResultMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from test
+		where id = #{id,jdbcType=INTEGER}
+	</select>
+	
+</mapper>
