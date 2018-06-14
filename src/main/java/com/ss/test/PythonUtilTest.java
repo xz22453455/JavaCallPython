@@ -32,7 +32,7 @@ public class PythonUtilTest {
 		Algorithm data = algorithmService.getByPrimaryKey(id);
 		String algorithm = data.getAlgorithm();
 		List<Map> list = new ArrayList<Map>();
-		//给定参数
+		// 给定参数
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("x", "10");
 		map.put("y", "20");

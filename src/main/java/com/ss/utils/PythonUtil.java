@@ -49,7 +49,7 @@ public class PythonUtil {
 	 */
 
 	public String callPythonScript(String algorithm, List<Map> args) throws Exception {
-	    String line = "";
+		String line = "";
 		String reStr = "";
 		StringBuilder sb = new StringBuilder();
 		for (Map m : args) {

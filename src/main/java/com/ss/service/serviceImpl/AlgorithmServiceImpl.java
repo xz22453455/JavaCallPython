@@ -15,9 +15,10 @@ import com.ss.service.AlgorithmService;
  * @date 2018年6月8日 上午10:05:25
  */
 @Service
-public class AlgorithmServiceImpl implements AlgorithmService{
+public class AlgorithmServiceImpl implements AlgorithmService {
 	@Autowired
 	AlgorithmMapper algorithmmapper;
+
 	@Override
 	public Algorithm getByPrimaryKey(Integer reportId) {
 		return algorithmmapper.getByPrimaryKey(reportId);
